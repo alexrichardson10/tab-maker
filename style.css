@@ -1,0 +1,48 @@
+:root {
+    --background: black;
+    --note-color: white;
+    --string-1: #D22730;
+    --string-2: #FFAD00;
+    --string-3: #E0E722;
+    --string-4: #44D62C;
+    --string-5: #4D4DFF;
+    --string-6: #C724B1;
+}
+
+body {
+    background-color: var(--background);
+    font-family: 'Courier New', monospace, serif;
+}
+
+.strings {
+    display: grid;
+    gap: 10px;
+    grid-template-rows: auto auto auto auto auto auto;
+    border: 5px, white;
+}
+
+.string {
+    position: relative;
+    align-items: center;
+    margin: 1px;
+}
+
+.string::before {
+    position: absolute;
+    top: 0.75em;
+    width: 100%;
+    content: "";
+    height: .2em;
+    z-index: -1;
+    background: var(--background);
+}
+
+.note {
+    height: 1.5em;
+    line-height: 1.5em;
+    width: 1.5em;
+    background-color: gray;
+    font-size: 1.5em;
+    color: var(--note-color);
+    text-align: center;
+}
